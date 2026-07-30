@@ -1,0 +1,14 @@
+---
+description: Reminder - remotes + local GitHub creds file (canonical rule is ~/.cursor/rules)
+alwaysApply: true
+---
+
+# Git remotes and GitHub MCP creds
+
+| | |
+| --- | --- |
+| Remotes | Prefer `interchouette` then `github` (see global Cursor git-remote rule) |
+| Creds file | Repo-local **`.github`** (gitignored) with `GITHUB_TOKEN=…`, or set `GITHUB_CREDS_FILE` |
+| MCP launcher | `scripts/github-mcp.sh` (reads creds file; no host-absolute path defaults) |
+
+Do not commit `.github` or put machine-local absolute paths in this rule or in MCP config.

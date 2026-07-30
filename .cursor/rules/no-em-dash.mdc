@@ -1,0 +1,16 @@
+---
+description: Em dash (U+2014) is forbidden in tvscreener-rs artifacts
+alwaysApply: true
+---
+
+# No em dash (tvscreener-rs)
+
+The Unicode em dash (code point **U+2014**) is forbidden in this project:
+
+- code, comments, strings
+- docs, README, commit messages
+- Cursor rules themselves (name the code point; do not paste the glyph)
+
+Use ASCII hyphen `-`, colon `:`, commas, parentheses, or `|` instead.
+
+If you see U+2014 in a file you touch, remove it. Search with `rg $'\u2014'`.
